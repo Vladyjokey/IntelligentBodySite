@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Професионални кинезитерапевтични и физиотерапевтични услуги в София. Запишете час за лечение и рехабилитация.">
+    <meta name="keywords" content="кинезитерапия, физиотерапия, лечение, рехабилитация, София, България">
+    <meta name="author" content="Вашето име">
+    <link rel="alternate" hreflang="bg" href="https://example.com/bg/" />
+    <link rel="alternate" hreflang="en" href="https://example.com/en/" />
+    <title>Кабинет за Кинезитерапия и Физиотерапия в София</title>
+    <link rel="icon" type="image/x-icon" href="Twitter-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav>  
+            <div class="nav-links" id="navLinks">
+                <div class="language" id="language">
+                    <button class="lanButton" id="lanButton">
+                        <img src="languageIcon.png" alt="Икона за смяна на езика">
+                        <label for="languageIcon">Български</label>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="indexbg.html">Български</a>
+                        <a href="indexen.html">English</a>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/vesela.dimitrova.982" target="_blank">
+                        <img src="Facebook_Logo.png" alt="Лого на Facebook" class="facebookLink">
+                    </a>
+                </div>
+                <i class="fa fa-times" id="faTimes" onclick="hideMenu()"></i>
+                <ul class="nav-list">
+                    <li><a id="home" href="index.html">Начало</a></li>
+                    <li><a id="services" href="services.html">Услуги</a></li>
+                    <li><a id="for-us" href="forus.html">За нас</a></li>
+                    <li><a id="contact" href="contact.html">Контакти</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1 id="h1">Кабинет за Кинезитерапия и Физиотерапия</h1>
+            <p id="p1">Професионални услуги в София. Запишете час за лечение и рехабилитация.</p>
+            <a href="contact.html" class="hero-btn" id="serviceBtn">Запишете час</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="google-map">
+            <p>Кабинетът се намира на адрес - ул. „Иван Димитров-Куклата“ блок №53. За повече информация вижте картата или посетете нашата страница с <a href="services.html" style="color: rgb(0, 118, 67);">услуги</a>.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.137814252013!2d23.368514276706044!3d42.67962297116509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa858680e57d63%3A0xccae3d05c21f86e0!2z0JjQvdGC0LXQu9C40LPQtdC90YLQvdC-INGC0Y_Qu9C-!5e0!3m2!1sen!2sbg!4v1719324591881!5m2!1sen!2sbg" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Add contact information and other links here -->
+    </footer>
+    <script src="indexscript.js"></script>
+</body>
+</html>
