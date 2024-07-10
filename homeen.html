@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional kinesiotherapy and physiotherapy services in Sofia. Book an appointment for treatment and rehabilitation.">
+    <meta name="keywords" content="kinesiotherapy, physiotherapy, treatment, rehabilitation, Sofia, Bulgaria">
+    <meta name="author" content="Your Name">
+    <link rel="alternate" hreflang="bg" href="https://example.com/homebg.html" />
+    <link rel="alternate" hreflang="en" href="https://example.com/homeen.html" />
+    <title>Kinesiotherapy and Physiotherapy Clinic in Sofia</title>
+    <link rel="icon" type="image/x-icon" href="Twitter-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav>  
+            <div class="nav-links" id="navLinks">
+                <div class="language" id="language">
+                    <button class="lanButton" id="lanButton">
+                        <img src="languageIcon.png" alt="Language Change Icon">
+                        <label for="languageIcon">English</label>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="homebg.html">Български</a>
+                        <a href="homeen.html">English</a>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/vesela.dimitrova.982" target="_blank">
+                        <img src="Facebook_Logo.png" alt="Facebook Logo" class="facebookLink">
+                    </a>
+                </div>
+                <i class="fa fa-times" id="faTimes" onclick="hideMenu()"></i>
+                <ul class="nav-list">
+                    <li><a id="home" href="#home-section">Home</a></li>
+                    <li><a id="services" href="#services-section">Services</a></li>
+                    <li><a id="for-us" href="#for-us-section">About Us</a></li>
+                    <li><a id="contact" href="#contact-section">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1 id="h1">Kinesiotherapy and Physiotherapy Clinic</h1>
+            <p id="p1">Professional services in Sofia. Book an appointment for treatment and rehabilitation.</p>
+            <a href="#contact-section" class="hero-btn" id="serviceBtn">Book Now</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home-section" class="google-map">
+            <p>The clinic is located at ul. "Ivan Dimitrov-Kuklata" block №53. For more information, see the map or visit our <a href="#services-section" style="color: rgb(0, 118, 67);">services</a> page.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.137814252013!2d23.368514276706044!3d42.67962297116509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa858680e57d63%3A0xccae3d05c21f86e0!2z0JjQvdGC0LXQu9C40LPQtdC90YLQvdC-INGC0Y_Qu9C-!5e0!3m2!1sen!2sbg!4v1719324591881!5m2!1sen!2sbg" 
+                width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <section id="services-section" class="service">
+            <div>
+                <h1 id="h1">Services</h1>            
+            </div>
+            <div class="serviceDiv">
+                <div class="sBoxes">
+                    <h2 id="h2">Kinesiotherapy</h2>
+                    <p id="sp">See more →</p>
+                </div>
+                <div class="sBoxes">
+                    <h2 id="h3">Therapeutic Massages and Manual Therapy</h2>
+                    <p id="sp">See more →</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="for-us-section">
+            <div class="forusDiv">
+                <div><p>This is mama</p></div>
+                <div><img src="Vesela_Dimitrova.jpg" alt="Dr. Vesela Dimitrova"></div>
+            </div>
+        </section>
+
+        <section id="contact-section">
+            <div class="contactDiv">
+                <div style="margin-top: 30px; text-align: left; font-size: xx-large;">
+                    <h1 id="h1">Book an Appointment</h1>
+                </div>
+                <div class="contactCol">
+                    <p id="phoneContactP">Book your appointment or contact us for more information at <span>088 952 0106</span>.</p>
+                    <h4 id="copiedText">Copied</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Add contact information and other links here -->
+    </footer>
+    <script src="indexscript.js"></script>
+    <script src="servicesscript.js"></script>
+</body>
+</html>

@@ -13,6 +13,28 @@ window.addEventListener('scroll', function() {
     }
 });
 
+let p = document.getElementById("phoneContactP")
+
+p.addEventListener("click", function (event) {
+    if (event.target.nodeName === "SPAN") {
+        copyToClipboard(event.target.innerText);
+        let copiedText = document.getElementById("copiedText")
+        copiedText.style.opacity = 1
+        setTimeout(function () {
+            copiedText.style.opacity = 0
+        }, 1000)
+    }
+});
+
+function copyToClipboard(text) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+}
+
 
 function showMenu(){
     navLinks.style.right = "0"
