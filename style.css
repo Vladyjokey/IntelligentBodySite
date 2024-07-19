@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Roboto;
+    font-family: Inter;
     font-weight: 300;
     src: url("Roboto-Black.ttf");
 }
@@ -8,22 +8,37 @@
     margin: 0;
     padding: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
 }
 
+body {
+    overflow-x: hidden;
+}
 
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgb(0,0,0,0.6), rgb(0,0,0,0.6)), url("mainBG.jpg");
+    background-image: linear-gradient(to right, rgb(0,0,0,0.5), rgb(0,0,0,0.9)), url("mainBG.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.logoImage {
+    position: fixed; 
+    top: 10px; 
+    left: 10px;
+
+}
+
+.logoImage img {
+    width: 70px;
+    height: 60px;
 }
 
 .google-map {
@@ -61,9 +76,8 @@ nav img {
 }
 
 .language {
-    position: fixed;
     top: 10px;
-    left: 10px;
+    right: 10px;
     display: inline-block;
     justify-content: flex-start;
     margin: 10px;
@@ -85,7 +99,6 @@ nav img {
 }
 
 .lanButton label {
-    color: white;
     cursor: pointer;
     font-weight: 500;
     font-size: medium;
@@ -174,7 +187,6 @@ nav img {
 }
 
 .nav-links ul li a {
-    color: white;
     text-decoration: none;
     font-size: large;
     transition: 0.5s;
@@ -200,20 +212,77 @@ nav img {
 }
 
 .text-box {
-    width: 90%;
-    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
     text-align: left;
     margin-left: 10px;
 }
+
 .text-box h1 {
-    font-size: 62px;
+    font-size: 48px;
     margin-bottom: 20px;
+    
 }
+
 .text-box p {
     font-size: large;
     margin-bottom: 20px;
     margin-left: 10px;
-    color: white;
+}
+
+.description {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.description.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.infoBox {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    opacity: 0;
+    transform: translateY(-60px); /* Adjust this value as needed */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Animation class */
+.infoBox.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-box {
+    overflow: hidden; /* To prevent content overflow during animation */
+}
+
+.contactBox {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+
+.contactBox p {
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.workingHours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-btn {
@@ -282,7 +351,7 @@ nav .fa {
 .service {
     min-height: 100vh;
     padding: 80px 40px;
-    background-color: #4c9f70;
+    background: linear-gradient(#dcdcdc, #ffffff);;
     color: white;
     text-align: center;
 }
@@ -297,12 +366,14 @@ nav .fa {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 40px;
+    overflow: hidden;
+
 }
 
 .sBoxes {
     background-size: cover;
-    height: 300px;
-    width: 300px;
+    height: 600px;
+    width: 360px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -311,8 +382,48 @@ nav .fa {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    perspective: 1000px; 
+}
+
+.sBoxesInner {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.sBoxesFront, .sBoxesBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.sBoxesFront {
     background-image: linear-gradient(#4c9f70cd, #3ec8b1b9), url("mainBG.jpg");
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.sBoxesBack {
+    transform: rotateY(180deg);
+    background: linear-gradient(#4c9f70cd, #3ec8b1b9);
+}
+
+.sBoxes.flip .sBoxesInner {
+    transform: rotateY(-180deg);
+}
+
+.sBoxesA {
+    opacity: 0;
+    transform: translateY(150px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.sBoxes.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .sBoxes h2 {
@@ -380,4 +491,19 @@ nav .fa {
 
 #copiedText {
     opacity: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background: linear-gradient(white 10%, #387d56 20%, #387d56 90%);
+    gap: 400px;
+    padding-top: 20px;
+}
+
+footer iframe {
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 10px;
 }
