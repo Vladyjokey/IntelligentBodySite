@@ -4,6 +4,10 @@
     src: url("Roboto-Black.ttf");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +37,6 @@ body {
     position: fixed; 
     top: 10px; 
     left: 10px;
-
 }
 
 .logoImage img {
@@ -222,7 +225,6 @@ nav img {
 .text-box h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    
 }
 
 .text-box p {
@@ -245,8 +247,9 @@ nav img {
 .infoBox {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
-    min-width: 600px;
+    width: 600px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
@@ -306,6 +309,21 @@ nav img {
 nav .fa {
     display: none;
 }
+
+@media (max-width: 1200px) {
+    .text-box {
+        flex-direction: column;
+        gap: 100px;
+    }
+    .infoBox {
+        min-width: 100%;
+        padding: 10px;
+    } 
+    .footerContactDiv {
+        display: none !important;
+    }
+}
+
 @media (max-width: 700px) {
     ul li {
         display: block;
@@ -334,6 +352,19 @@ nav .fa {
     .nav-links ul {
         padding: 30px;
     }
+    
+    .google-map {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .google-map iframe {
+        height: 300px;
+    }
+    .footerContactDiv {
+        min-width: 100%;
+        padding: 20px;
+        gap: 10px;
+    }
 }
 
 .icons .fa {
@@ -343,15 +374,14 @@ nav .fa {
     padding: 18px 0;
 }
 
-.icons .fa img {
-    width: 50px;
-    height: auto;
+.icons .fa:hover {
+    color: black;
 }
 
 .service {
     min-height: 100vh;
     padding: 80px 40px;
-    background: linear-gradient(#dcdcdc, #ffffff);;
+    background: linear-gradient(#e4e4e4cd, #ffffff);
     color: white;
     text-align: center;
 }
@@ -367,7 +397,6 @@ nav .fa {
     flex-wrap: wrap;
     gap: 40px;
     overflow: hidden;
-
 }
 
 .sBoxes {
@@ -474,7 +503,7 @@ nav .fa {
     flex-wrap: wrap;
     gap: 40px;
     padding: 80px 40px;
-    background-color: #58c587a3;
+    background-color: white;
     text-align: center;
 }
 
@@ -487,6 +516,7 @@ nav .fa {
 .forusDiv p {
     font-size: larger;
     margin-top: 20px;
+    color: black;
 }
 
 #copiedText {
@@ -495,15 +525,47 @@ nav .fa {
 
 footer {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh;
+    background: linear-gradient(white 10%, #387d56 20%, #2d6143 90%);
+    padding-top: 200px;
+}
+
+.fDiv {
+    display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 50vh;
-    background: linear-gradient(white 10%, #387d56 20%, #387d56 90%);
-    gap: 400px;
-    padding-top: 20px;
+    gap: 200px;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 footer iframe {
     border: 5px solid rgb(255, 255, 255);
     border-radius: 10px;
+}
+
+.footerContactDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 300px;
+    gap: 20px;
+    font-size: larger;
+    background-color: rgba(128, 128, 128, 0.385);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.socialMediaDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
 }
