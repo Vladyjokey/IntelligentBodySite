@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кабинет за Кинезитерапия и Физиотерапия в София</title>
+    <link rel="icon" type="image/x-icon" href="Twitter-logo.png">
+    <link rel="stylesheet" href="blogstyle.css">
+    <link rel="stylesheet" href="navbarstyle.css">
+</head>
+<body>
+    <header>
+        <nav>  
+            <div class="nav-links" id="navLinks">
+                <a class="logoImage" href="#header"><img src="vitruvianManIcon.png" alt="логото на Интелигентно тяло"></a>
+                <i class="fa fa-times" id="faTimes" onclick="hideMenu()"></i>
+                <ul class="nav-list">
+                    <li><a id="home" href="homebg.html#header">Начало</a></li>
+                    <li><a id="services" href="homebg.html#services-section">Услуги</a></li>
+                    <li><a id="for-us" href="homebg.html#for-us-section">За нас</a></li>
+                    <li><a id="contact" href="#contact-section">Контакти</a></li>
+                    <li><a id="blog" href="blogbg.html">Блог</a></li>
+                    <div class="language" id="language">
+                        <button class="lanButton" id="lanButton">
+                            <img src="languageIcon.png" alt="Икона за смяна на езика">
+                            <label for="languageIcon">Български</label>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="homebg.html">Български</a>
+                            <a href="homeen.html">English</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="headerDiv">
+            <h1>Блог</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="articles">
+            <article>
+                <h2>Understanding JavaScript Closures</h2>
+                <p class="date">July 20, 2024</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                <a href="article1.html">Read More</a>
+            </article>
+
+            <article>
+                <h2>Top 10 CSS Tips and Tricks</h2>
+                <p class="date">July 15, 2024</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                <a href="article2.html">Read More</a>
+            </article>
+
+            <article>
+                <h2>How to Build a Responsive Layout</h2>
+                <p class="date">July 10, 2024</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                <a href="article3.html">Read More</a>
+            </article>
+
+            <article>
+                <h2>How to Build a Responsive Layout</h2>
+                <p class="date">July 10, 2024</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                <a href="article3.html">Read More</a>
+            </article>
+
+            <article>
+                <h2>How to Build a Responsive Layout</h2>
+                <p class="date">July 10, 2024</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                <a href="article3.html">Read More</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const maxScroll = 200; // Adjust this value based on when you want the color to be fully opaque
+
+            if (scrollPosition > 0) {
+                const opacity = Math.min(scrollPosition / maxScroll, 1); // Calculate opacity based on scroll position
+                navLinks.style.backgroundColor = `rgba(99, 158, 61, ${opacity})`; // Apply opacity to the background color
+            } else {
+                navLinks.style.backgroundColor = "rgba(99, 158, 61, 0)"; // Fully transparent
+            }
+        });
+    </script>
+</body>
+</html>

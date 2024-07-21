@@ -1,4 +1,3 @@
-/* Reset some default styles */
 body, h1, h2, p {
     margin: 0;
     padding: 0;
@@ -12,14 +11,15 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    display: flex;
+    color: white;
     text-align: center;
-}
-
-header h1 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 50px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.9)), url("mainBG.jpg");
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
@@ -33,20 +33,30 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.headerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 300px;
+    margin-top: 10px;
 }
 
 main {
+    display: flex;
+    flex-direction: row;
     padding: 1rem;
 }
 
 .articles {
-    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -54,7 +64,6 @@ article {
     background: #fff;
     border-radius: 8px;
     padding: 1rem;
-    margin-bottom: 1.5rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
@@ -64,7 +73,6 @@ article h2 {
 
 .date {
     color: #888;
-    font-size: 0.9rem;
     margin-bottom: 1rem;
 }
 
@@ -85,4 +93,11 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Media query for screen widths below 700px */
+@media (max-width: 700px) {
+    .articles {
+        grid-template-columns: 1fr;
+    }
 }
