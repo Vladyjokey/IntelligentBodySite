@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (scrollPosition > 0) {
         const opacity = Math.min(scrollPosition / maxScroll, 1); // Calculate opacity based on scroll position
-        navLinks.style.backgroundColor = `rgba(99, 158, 61, ${opacity})`; // Apply opacity to the background color
+        navLinks.style.background = `linear-gradient(to bottom, rgba(99, 158, 61, ${opacity}) 75%, rgba(99, 158, 61, ${opacity - 0.5}) 100%)`;
     } else {
         navLinks.style.backgroundColor = "rgba(99, 158, 61, 0)"; // Fully transparent
     }
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add("animate");
-                observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.3 }); // Adjust the threshold value as needed
@@ -53,23 +53,34 @@ window.addEventListener('scroll', function() {
     const maxScroll = 500; // Adjust this value based on when you want the color to be fully opaque
 
     if (scrollPosition > 0) {
-        const opacity = Math.min(scrollPosition / maxScroll, 1); // Calculate opacity based on scroll position
-        navLinks.style.backgroundColor = `rgba(99, 158, 61, ${opacity})`; // Apply opacity to the background color
+        const opacity = Math.min(scrollPosition / maxScroll, 1);
+        navLinks.style.background = `linear-gradient(to bottom, rgba(99, 158, 61, ${opacity}) 75%, rgba(99, 158, 61, ${opacity - 0.5}) 100%)`;
     } else {
-        navLinks.style.backgroundColor = "rgba(99, 158, 61, 0)"; // Fully transparent
+        navLinks.style.background = "rgba(99, 158, 61, 0)";
     }
 });
 
 let p = document.getElementById("contactBox")
+let isCurrentlyCopied = false
 
 p.addEventListener("click", function (event) {
-    if (event.target.nodeName === "SPAN") {
-        copyToClipboard(event.target.innerText);
-        let copiedText = document.getElementById("copiedText")
-        copiedText.style.opacity = 1
+    if (event.target.classList.contains("copyable") && !isCurrentlyCopied) {
+        copyToClipboard(event.target.innerText)
+
+        let copiedTooltip = document.getElementById("copiedTooltip")
+        let rect = event.target.getBoundingClientRect()
+        
+        copiedTooltip.style.top = `${rect.top - copiedTooltip.offsetHeight - 10 + window.scrollY}px`
+        copiedTooltip.style.left = `${rect.left + (rect.width / 2) - (copiedTooltip.offsetWidth / 2)}px`
+        
+        copiedTooltip.classList.add("show-tooltip")
+
+        isCurrentlyCopied = true
+
         setTimeout(function () {
-            copiedText.style.opacity = 0
-        }, 1000)
+            copiedTooltip.classList.remove("show-tooltip")
+            isCurrentlyCopied = false
+        }, 2000);
     }
 });
 
@@ -81,7 +92,6 @@ function copyToClipboard(text) {
     document.execCommand("copy");
     document.body.removeChild(textArea);
 }
-
 
 function showMenu(){
     navLinks.style.right = "0"

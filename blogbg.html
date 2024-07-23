@@ -26,7 +26,7 @@
                             <label for="languageIcon">Български</label>
                         </button>
                         <div class="dropdown-content">
-                            <a href="homebg.html">Български</a>
+                            <a href="blogbg.html">Български</a>
                             <a href="homeen.html">English</a>
                         </div>
                     </div>
@@ -76,23 +76,52 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
                 <a href="article3.html">Read More</a>
             </article>
+            <article>
+                <h2>How to Build a Responsive Layout</h2>
+                <p class="date">July 10, 2024</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                <a href="article3.html">Read More</a>
+            </article>
+            <article>
+                <h2>How to Build a Responsive Layout</h2>
+                <p class="date">July 10, 2024</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                <a href="article3.html">Read More</a>
+            </article>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 My Blog. All rights reserved.</p>
+        <a href="https://www.facebook.com/vesela.dimitrova.982" target="_blank">
+            <img src="Facebook_Logo.png" alt="Лого на Facebook" width="50px" height="50px">
+        </a>
+        <a href="https://www.google.com/search?sa=X&sca_esv=be824180b2ab340a&tbm=lcl&sxsrf=ADLYWILEdPJmb_W1Lv4pv9bH7Q4FEhfM6Q:1721513671140&q=%D0%98%D0%BD%D1%82%D0%B5%D0%BB%D0%B8%D0%B3%D0%B5%D0%BD%D1%82%D0%BD%D0%BE+%D1%82%D1%8F%D0%BB%D0%BE+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE3sTC3NLI0MjEzMgXSlqZGGxgZXzFqXphxYe_FpgtbL-y-sOPCZiAN4u29sE_hYtPFfqDgPoWg1LLM1PLiRazEqwUAEO54MnMAAAA&rldimm=14748792924625929952&hl=en-BG&ved=2ahUKEwjRnOCW0raHAxXtVvEDHaxkATwQ9fQKegQIPBAF&biw=1632&bih=928&dpr=1#lkt=LocalPoiReviews&lrd=0x40aa858680e57d63:0xccae3d05c21f86e0,3,,,," target="_blank">
+            <img src="googleLogo.png" alt="Лого на Google" width="50px" height="50px">
+        </a>
     </footer>
 
     <script>
-        window.addEventListener('scroll', function() {
+         document.addEventListener("DOMContentLoaded", function() {
+            // Navigation bar color on load
             const scrollPosition = window.scrollY;
-            const maxScroll = 200; // Adjust this value based on when you want the color to be fully opaque
+            const maxScroll = 100; // Adjust this value based on when you want the color to be fully opaque
 
             if (scrollPosition > 0) {
                 const opacity = Math.min(scrollPosition / maxScroll, 1); // Calculate opacity based on scroll position
                 navLinks.style.backgroundColor = `rgba(99, 158, 61, ${opacity})`; // Apply opacity to the background color
             } else {
                 navLinks.style.backgroundColor = "rgba(99, 158, 61, 0)"; // Fully transparent
+            }
+        })
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const maxScroll = 100; // Adjust this value based on when you want the color to be fully opaque
+
+            if (scrollPosition > 0) {
+                const opacity = Math.min(scrollPosition / maxScroll, 1);
+                navLinks.style.background = `linear-gradient(to bottom, rgba(99, 158, 61, ${opacity}) 75%, rgba(99, 158, 61, ${opacity - 0.5}) 100%)`;
+            } else {
+                navLinks.style.background = "rgba(99, 158, 61, 0)";
             }
         });
     </script>

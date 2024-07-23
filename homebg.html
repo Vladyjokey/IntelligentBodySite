@@ -13,11 +13,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="navbarstyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 
 <body>
@@ -30,7 +25,7 @@
                     <li><a id="home" href="#header">Начало</a></li>
                     <li><a id="services" href="#services-section">Услуги</a></li>
                     <li><a id="for-us" href="#for-us-section">За нас</a></li>
-                    <li><a id="contact" href="#contact-section">Контакти</a></li>
+                    <li><a id="contact" href="contactbg.html">Контакти</a></li>
                     <li><a id="blog" href="blogbg.html">Блог</a></li>
                     <div class="language" id="language">
                         <button class="lanButton" id="lanButton">
@@ -56,11 +51,11 @@
                     <p>За връзка:</p>
                     <div style="display: flex;">
                         <img src="phoneIcon.png" alt="an icon of a phone" width="22px" height="30px">
-                        <p><span>+359 88 952 0106</span></p>
+                        <p><span class="copyable">+359 88 952 0106</span></p>
                     </div>
                     <div style="display: flex;">
                         <img src="emailIcon.png" alt="an icon of an mail letter" width="30px" height="30px">
-                        <p><span>vvvesi_bg@yahoo.com</span></p>
+                        <p><span class="copyable">vvvesi_bg@yahoo.com</span></p>
                     </div>
                 </div>
                 <div class="workingHours">
@@ -71,7 +66,8 @@
                     <p>Понеделник - Петък: 9:00 до 17:00</p>
                     <p>Събота: 11:00 до 15:00</p>
                 </div>
-            </div>
+            </div>    
+            <div id="copiedTooltip" class="tooltip">Copied!</div>
         </div>
     </header>
 
@@ -89,8 +85,8 @@
             <div class="serviceDiv">
                 <div class="sBoxes sBoxesA">
                     <div class="sBoxesInner">
-                        <div class="sBoxesFront">
-                            <h2 id="h2">Кинезитерапия</h2>
+                        <div class="sBoxesFront" style="background-image: ;">
+                            <h2 id="h2">Консултация</h2>
                             <p id="sp">Вижте повече →</p>
                         </div>
                         <div class="sBoxesBack">
@@ -101,7 +97,40 @@
                 <div class="sBoxes sBoxesA">
                     <div class="sBoxesInner">
                         <div class="sBoxesFront">
-                            <h2 id="h3">Лечебни масажи и мануална терапия</h2>
+                            <h2 id="h2">Функционална диагностика</h2>
+                            <p id="sp">Вижте повече →</p>
+                        </div>
+                        <div class="sBoxesBack">
+                            <p id="sp">Детайли</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sBoxes sBoxesA">
+                    <div class="sBoxesInner">
+                        <div class="sBoxesFront">
+                            <h2 id="h3">Лечебна процедура</h2>
+                            <p id="sp">Вижте повече →</p>
+                        </div>
+                        <div class="sBoxesBack">
+                            <p id="sp">Детайли</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sBoxes sBoxesA">
+                    <div class="sBoxesInner">
+                        <div class="sBoxesFront">
+                            <h2 id="h3">Изработване на индивидуална програма</h2>
+                            <p id="sp">Вижте повече →</p>
+                        </div>
+                        <div class="sBoxesBack">
+                            <p id="sp">Детайли</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sBoxes sBoxesA">
+                    <div class="sBoxesInner">
+                        <div class="sBoxesFront" >
+                            <h2 id="h3">Мануална терапия</h2>
                             <p id="sp">Вижте повече →</p>
                         </div>
                         <div class="sBoxesBack">
@@ -125,8 +154,20 @@
 
         <section id="for-us-section">
             <div class="forusDiv">
-                <div><p>Това е мама</p></div>
-                <div><img src="Vesela_Dimitrova.jpg" alt="д-р Весела Димитрова"></div>
+                <p>
+                    В професията съм от 25+ години и имам невероятния шанс да допълвам богатият си клиничен опит във водеща в България клиника с теоретични, академични познания и световни новости в сферата на рехабилитацията и медицината.
+                    Следя най-новите методики и ги пречупвам през познанията на физиологията, биомеханиката и неврологията на базата на индивидуалните характеристики на пациента.
+                    Индивидуалния подход е тайната за решение на болката на пациента в комбинация с доверието между нас.
+                    И тъй като рехабилитацията подпомага естественото възстановяване, изработването и следването на специализираната програма за възстановяване е важна за успеха на лечението.
+                    Имам докторска степен по кинезитерапия на тема  хроничната болка в кръста. Интерес за мен са заболяванията на опорно-двигателния апарат (ОДА), периферна нервна ситема (ПНС), мускулно-скелетни дисфункции, болкови синдроми, сколиози, пре- и пост-оперативни съсътояния.
+                    В медицината има три основни подхода за възстановяване на здравето: <br>
+
+                    -        Чрез естествени преформини фактори (рехабилитация, физиотерапя) <br>
+                    -        Медикаментозно <br>
+                    -        Хирургично <br>
+                    Информираното решение на пациента за всички възможности за неговото лечение е негов избор.
+                </p>
+                <img src="Vesela_Dimitrova.jpg" alt="д-р Весела Димитрова">
             </div>
         </section>
     </main>

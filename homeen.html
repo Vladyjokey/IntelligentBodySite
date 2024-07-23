@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional kinesitherapy and physiotherapy services in Sofia. Book an appointment for treatment and rehabilitation.">
+    <meta name="description" content="Professional kinesitherapy and physiotherapy services in Sofia. Schedule an appointment for treatment and rehabilitation.">
     <meta name="keywords" content="kinesitherapy, physiotherapy, treatment, rehabilitation, Sofia, Bulgaria">
     <meta name="author" content="Your Name">
     <link rel="alternate" hreflang="bg" href="https://example.com/homebg.html" />
@@ -11,30 +11,22 @@
     <title>Kinesitherapy and Physiotherapy Clinic in Sofia</title>
     <link rel="icon" type="image/x-icon" href="Twitter-logo.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbarstyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 
 <body>
     <header class="header" id="header">
-        <nav>  
+        <nav>
             <div class="nav-links" id="navLinks">
                 <a class="logoImage" href="#header"><img src="vitruvianManIcon.png" alt="Intelligent Body logo"></a>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/vesela.dimitrova.982" target="_blank">
-                        <img src="Facebook_Logo.png" alt="Facebook Logo" class="facebookLink">
-                    </a>
-                </div>
                 <i class="fa fa-times" id="faTimes" onclick="hideMenu()"></i>
                 <ul class="nav-list">
                     <li><a id="home" href="#header">Home</a></li>
                     <li><a id="services" href="#services-section">Services</a></li>
                     <li><a id="for-us" href="#for-us-section">About Us</a></li>
                     <li><a id="contact" href="#contact-section">Contact</a></li>
+                    <li><a id="blog" href="blogen.html">Blog</a></li>
                     <div class="language" id="language">
                         <button class="lanButton" id="lanButton">
                             <img src="languageIcon.png" alt="Language switch icon">
@@ -62,7 +54,7 @@
                         <p><span>+359 88 952 0106</span></p>
                     </div>
                     <div style="display: flex;">
-                        <img src="emailIcon.png" alt="an icon of a mail letter" width="30px" height="30px">
+                        <img src="emailIcon.png" alt="an icon of an mail letter" width="30px" height="30px">
                         <p><span>vvvesi_bg@yahoo.com</span></p>
                     </div>
                 </div>
@@ -80,7 +72,7 @@
 
     <main>
         <!-- <section id="home-section" class="google-map">
-            <p>The clinic is located at - Ivan Dimitrov-Kuklata Street block №53. For more information, see the map or visit the <a href="#services-section" style="color: rgb(0, 118, 67);">services</a> page.</p>
+            <p>The clinic is located at - Ivan Dimitrov-Kuklata Street, block 53. For more information, see the map or visit the <a href="#services-section" style="color: rgb(0, 118, 67);">services</a> page.</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.137814252013!2d23.368514276706044!3d42.67962297116509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa858680e57d63%3A0xccae3d05c21f86e0!2z0JjQvdGC0LXQu9C40LPQtdC90YLQvdC-INGC0Y_Qu9C-!5e0!3m2!1sen!2sbg!4v1719324591881!5m2!1sen!2sbg" 
                 width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section> -->
@@ -92,8 +84,8 @@
             <div class="serviceDiv">
                 <div class="sBoxes sBoxesA">
                     <div class="sBoxesInner">
-                        <div class="sBoxesFront">
-                            <h2 id="h2">Kinesitherapy</h2>
+                        <div class="sBoxesFront" style="background-image: ;">
+                            <h2 id="h2">Consultation</h2>
                             <p id="sp">See more →</p>
                         </div>
                         <div class="sBoxesBack">
@@ -104,7 +96,40 @@
                 <div class="sBoxes sBoxesA">
                     <div class="sBoxesInner">
                         <div class="sBoxesFront">
-                            <h2 id="h3">Therapeutic Massages and Manual Therapy</h2>
+                            <h2 id="h2">Functional Diagnostics</h2>
+                            <p id="sp">See more →</p>
+                        </div>
+                        <div class="sBoxesBack">
+                            <p id="sp">Details</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sBoxes sBoxesA">
+                    <div class="sBoxesInner">
+                        <div class="sBoxesFront">
+                            <h2 id="h3">Therapeutic Procedure</h2>
+                            <p id="sp">See more →</p>
+                        </div>
+                        <div class="sBoxesBack">
+                            <p id="sp">Details</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sBoxes sBoxesA">
+                    <div class="sBoxesInner">
+                        <div class="sBoxesFront">
+                            <h2 id="h3">Creating an Individual Program</h2>
+                            <p id="sp">See more →</p>
+                        </div>
+                        <div class="sBoxesBack">
+                            <p id="sp">Details</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sBoxes sBoxesA">
+                    <div class="sBoxesInner">
+                        <div class="sBoxesFront">
+                            <h2 id="h3">Manual Therapy</h2>
                             <p id="sp">See more →</p>
                         </div>
                         <div class="sBoxesBack">
@@ -128,8 +153,20 @@
 
         <section id="for-us-section">
             <div class="forusDiv">
-                <div><p>This is Mom</p></div>
-                <div><img src="Vesela_Dimitrova.jpg" alt="Dr. Vesela Dimitrova"></div>
+                <p>
+                    I have been in the profession for 25+ years and have the incredible opportunity to complement my extensive clinical experience in a leading clinic in Bulgaria with theoretical, academic knowledge and global innovations in the field of rehabilitation and medicine.
+                    I follow the latest methodologies and apply them through the knowledge of physiology, biomechanics, and neurology based on the individual characteristics of the patient.
+                    The individual approach is the secret to solving the patient's pain in combination with the trust between us.
+                    Since rehabilitation supports natural recovery, developing and following a specialized recovery program is important for the success of the treatment.
+                    I have a PhD in kinesitherapy on the topic of chronic low back pain. My interests include diseases of the musculoskeletal system (MSD), peripheral nervous system (PNS), musculoskeletal dysfunctions, pain syndromes, scoliosis, pre- and post-operative conditions.
+                    In medicine, there are three main approaches to restoring health: <br>
+
+                    -        Through natural factors (rehabilitation, physiotherapy) <br>
+                    -        Medicinally <br>
+                    -        Surgically <br>
+                    The informed decision of the patient about all possible treatment options is their choice.
+                </p>
+                <img src="Vesela_Dimitrova.jpg" alt="Dr. Vesela Dimitrova">
             </div>
         </section>
     </main>
@@ -143,7 +180,7 @@
                     <p><span>+359 88 952 0106</span></p>
                 </div>
                 <div style="display: flex; gap: 5px;">
-                    <img src="emailIcon.png" alt="an icon of a mail letter" width="30px" height="30px">
+                    <img src="emailIcon.png" alt="an icon of an mail letter" width="30px" height="30px">
                     <p><span>vvvesi_bg@yahoo.com</span></p>
                 </div>
             </div>

@@ -142,97 +142,45 @@ body {
     justify-content: center;
 }
 
-.hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    margin-left: 10px;
-    font-size: medium;
-    font-weight: 500;
-    color: white;
-    border: 2px solid white;
-    padding: 12px 34px;
-    background: transparent;
-    cursor: pointer;
-    transition: 0.5s;
+.tooltip {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; /* Ensure the tooltip does not capture mouse events */
 }
-.hero-btn:hover {
-    border: 2px solid #496f5dd5;
-    background: linear-gradient(135deg ,#abfcd689, #496f5dd5);
-    opacity: 0.9;
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
+
+.show-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 nav .fa {
     display: none;
 }
 
 .googleMapIframe {
     width: 650px;
-    height: 300px;
-}
-
-@media (max-width: 1200px) {
-    .text-box {
-        flex-direction: column;
-        gap: 100px;
-    }
-    .infoBox {
-        min-width: 100%;
-        padding: 10px;
-    } 
-    .footerContactDiv {
-        display: none !important;
-    }
-}
-
-@media (max-width: 700px) {
-    .description {
-        flex-wrap: wrap;
-    }
-    .description h1 {
-        font-size: 30px;
-    }
-    .description span {
-        font-size: 40px;
-    }
-    .infoBox {
-        flex-direction: column;
-        width: 100%;
-    } 
-    ul li {
-        display: block;
-    }
-    .nav-links {
-        position: absolute;
-        background: #4C9F70;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 0.5s;
-    }
-    nav .fa {
-        display: block;
-        color: black;
-        position: relative;
-        margin: 10px;
-        top: -8vh;
-        right: -2vh;
-        font-size: 20px;
-        cursor: pointer;
-    }
-    .nav-links ul {
-        padding: 30px;
-    }
-    .googleMapIframe {
-        width: 290px;
-        height: 300px;
-    }
-    .footerContactDiv {
-        min-width: 100%;
-        padding: 20px;
-        gap: 10px;
-    }
+    height: 400px;
+    margin-bottom: 50px;
 }
 
 .icons .fa {
@@ -366,13 +314,19 @@ nav .fa {
 .forusDiv {
     min-height: 50vh;
     display: flex;
-    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between; /* Ensure space between elements */
     align-items: center;
-    flex-wrap: wrap;
     gap: 40px;
-    padding: 80px 40px;
-    background-color: white;
-    text-align: center;
+    background: linear-gradient(to bottom, #fff 5%, #2d6143 10%, #2d6143 95%, #fff 100%);
+    text-align: left;
+    padding: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    line-height: 30px;
 }
 
 .forusDiv img {
@@ -384,7 +338,7 @@ nav .fa {
 .forusDiv p {
     font-size: larger;
     margin-top: 20px;
-    color: black;
+    color: white;
 }
 
 #copiedText {
@@ -436,4 +390,73 @@ footer iframe {
     width: 100%;
     gap: 10px;
     padding: 5px;
+}
+
+@media (max-width: 1200px) {
+    .text-box {
+        flex-direction: column;
+        gap: 100px;
+    }
+    .infoBox {
+        min-width: 100%;
+        padding: 10px;
+    } 
+    .footerContactDiv {
+        display: none !important;
+    }
+    .forusDiv {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 700px) {
+    .description {
+        flex-wrap: wrap;
+    }
+    .description h1 {
+        font-size: 30px;
+    }
+    .description span {
+        font-size: 40px;
+    }
+    .infoBox {
+        flex-direction: column;
+        width: 100%;
+    } 
+    ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: #4C9F70;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav .fa {
+        display: block;
+        color: black;
+        position: relative;
+        margin: 10px;
+        top: -8vh;
+        right: -2vh;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+    .googleMapIframe {
+        width: 290px;
+        height: 300px;
+    }
+    .footerContactDiv {
+        min-width: 100%;
+        padding: 20px;
+        gap: 10px;
+    }
 }

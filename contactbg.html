@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactstyle.css">
+    <link rel="stylesheet" href="navbarstyle.css">
+</head>
+<body>
+    <header>
+        <nav>  
+            <div class="nav-links" id="navLinks" style="background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 0.5) 100%);">
+                <a class="logoImage" href="#header"><img src="vitruvianManIcon.png" alt="логото на Интелигентно тяло"></a>
+                <i class="fa fa-times" id="faTimes" onclick="hideMenu()"></i>
+                <ul class="nav-list">
+                    <li><a style="color: rgb(40, 40, 40);" id="home" href="homebg.html#header">Начало</a></li>
+                    <li><a style="color: rgb(40, 40, 40);" id="services" href="homebg.html#services-section">Услуги</a></li>
+                    <li><a style="color: rgb(40, 40, 40);" id="for-us" href="homebg.html#for-us-section">За нас</a></li>
+                    <li><a style="color: rgb(40, 40, 40);" id="contact" href="#contact-section">Контакти</a></li>
+                    <li><a style="color: rgb(40, 40, 40);" id="blog" href="blogbg.html">Блог</a></li>
+                    <div class="language" id="language">
+                        <button class="lanButton" id="lanButton">
+                            <img src="languageIcon.png" alt="Икона за смяна на езика">
+                            <label style="color: rgb(40, 40, 40);" for="languageIcon">Български</label>
+                        </button>
+                        <div  class="dropdown-content">
+                            <a href="blogbg.html">Български</a>
+                            <a href="homeen.html">English</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Свържете се с нас!</h1>
+        <div class="infoDiv">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.137814252013!2d23.368514276706044!3d42.67962297116509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa858680e57d63%3A0xccae3d05c21f86e0!2z0JjQvdGC0LXQu9C40LPQtdC90YLQvdC-INGC0Y_Qu9C-!5e0!3m2!1sen!2sbg!4v1719324591881!5m2!1sen!2sbg" 
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-info">
+                <p><strong>Адрес:</strong> ул. „Иван Димитров-Куклата“ 53</p>
+                <p><strong>Телефон:</strong> +359 88 952 0106</p>
+                <p><strong>Е-мейл:</strong> contact@website.com</p>
+            </div>
+            <div class="workingHours">
+                <p><strong>Понеделник - Петък:</strong> 9:00 - 17:00</p>
+                <p><strong>Събота:</strong> 11:00 - 15:00</p>
+            </div>
+        </div>
+        <div class="form-container">
+            <form action="send_email.php" method="post">
+                <label for="name">Име:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Е-мейл:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Съобщение:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                
+                <button type="submit">Изпрати съобщение</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://www.facebook.com/vesela.dimitrova.982" target="_blank">
+            <img src="Facebook_Logo.png" alt="Лого на Facebook" width="50px" height="50px">
+        </a>
+        <a href="https://www.google.com/search?sa=X&sca_esv=be824180b2ab340a&tbm=lcl&sxsrf=ADLYWILEdPJmb_W1Lv4pv9bH7Q4FEhfM6Q:1721513671140&q=%D0%98%D0%BD%D1%82%D0%B5%D0%BB%D0%B8%D0%B3%D0%B5%D0%BD%D1%82%D0%BD%D0%BE+%D1%82%D1%8F%D0%BB%D0%BE+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE3sTC3NLI0MjEzMgXSlqZGGxgZXzFqXphxYe_FpgtbL-y-sOPCZiAN4u29sE_hYtPFfqDgPoWg1LLM1PLiRazEqwUAEO54MnMAAAA&rldimm=14748792924625929952&hl=en-BG&ved=2ahUKEwjRnOCW0raHAxXtVvEDHaxkATwQ9fQKegQIPBAF&biw=1632&bih=928&dpr=1#lkt=LocalPoiReviews&lrd=0x40aa858680e57d63:0xccae3d05c21f86e0,3,,,," target="_blank">
+            <img src="googleLogo.png" alt="Лого на Google" width="50px" height="50px">
+        </a>
+    </footer>
+</body>
+</html>
