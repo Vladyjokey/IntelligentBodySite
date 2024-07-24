@@ -12,7 +12,7 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #f3f3f3;
     box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.7); 
     margin-top: 100px;
 }
@@ -46,6 +46,7 @@ nav ul li a {
     height: 400px;
     margin: 20px;
     margin-bottom: 150px;
+    font-size: x-large;
 }
 
 .contact-info {
@@ -58,8 +59,7 @@ nav ul li a {
         #ffc400 50%,            /* Color returns */
         #ffc400 100%            /* End of the color */
     );
-    background-size: 2px 2px; 
-    font-size: xx-large;
+    background-size: 1.5px 1.5px; 
     color: white;
     width: 50%;
     height: 100%;
@@ -81,6 +81,7 @@ nav ul li a {
     padding-left: 50px;
     border-top-right-radius: 60px; 
     border-bottom-right-radius: 15px; 
+    color: white;
 }
 
 .map-container {
@@ -112,6 +113,11 @@ nav ul li a {
     padding-bottom: 15px;
     margin-top: 20px;
     margin-bottom: -20px;
+    color: white;
+}
+
+.form-container p {
+    font-size: xx-large;
 }
 
 form {
@@ -142,7 +148,7 @@ form textarea {
 }
 
 form button {
-    width: 100%; /* Make button full-width */
+    width: 50%; /* Make button full-width */
     padding: 10px;
     background-color: #007bff;
     color: #fff;
@@ -150,6 +156,7 @@ form button {
     border-radius: 4px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    font-size: larger;
 }
 
 form button:hover {
@@ -161,11 +168,56 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background: #333;
+    background: #1d1d1d;
     color: #fff;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 5px;
     width: 100%;
     bottom: 0;
+}
+
+@media (max-width: 1260px) {
+    .infoDiv {
+        font-size: larger;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 85%;
+    }
+
+    .infoDiv {
+        flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 400px;
+        font-size: 14px;
+    }
+
+    .contact-info {
+        border-radius: 15px 15px 0 0;
+        padding-right: 60px;
+    }
+
+    .workingHours {
+        border-radius: 0 0 15px 15px;
+        padding-right: 60px;
+    }
+
+    .map-container {
+        position: absolute;
+        left: 0;
+        transform: translate(-5%, 130%);
+        width: 110%;
+        border-radius: 0px;
+    }
+
+    form {
+        max-width: 200px;
+    }
+
+    .form-container p {
+        font-size: larger;
+    } 
 }
