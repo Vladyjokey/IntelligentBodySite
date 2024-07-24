@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Menu</title>
+    <style>
+        .nav-links {
+            position: fixed;
+            background: #4C9F70;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px; /* Initially hide menu */
+            transition: right 0.5s; /* Smooth transition */
+            z-index: 5;
+        }
+
+        .nav-links.show {
+            right: 0; /* Slide in the menu */
+        }
+
+        .menuIcon, .closeIcon {
+            display: block;
+            position: fixed;
+            top: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .menuIcon {
+            right: 20px;
+        }
+
+        .closeIcon {
+            right: 60px; /* Adjust position for testing */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links" id="navLinks">
+            <p>Menu Content</p>
+        </div>
+        <i class="menuIcon" onclick="showMenu()">☰</i>
+        <i class="closeIcon" onclick="hideMenu()">✖</i>
+    </nav>
+    <script>
+        function showMenu() {
+            document.getElementById("navLinks").classList.add("show");
+        }
+
+        function hideMenu() {
+            document.getElementById("navLinks").classList.remove("show");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+* {
+    font-family: 'Gilmer', sans-serif;
+}
+
+nav img {
+    width: 120px;
+}
+
+.nav-links {
+    height: 75px;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end;
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    transition: background-color 0.5s ease; 
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.nav-links > * {
+    margin-left: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 3%;
+}
+
+.nav-list li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    margin: 0px 20px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    font-size: large;
+    transition: 0.5s;
+    color: black;
+}
+
+.nav-links ul li::after {
+    content: "";
+    height: 2.5px;
+    width: 0%;
+    background: rgb(111, 235, 140);
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.nav-links ul li a:hover {
+    opacity: 0.8;
+}
+
+.language {
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    justify-content: flex-start;
+    margin: 10px;
+    z-index: 1000;
+}
+
+.lanButton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5%;
+    background-color: transparent;
+    border: none;
+}
+
+.lanButton img {
+    width: 50px;
+    height: auto;
+}
+
+.lanButton label {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: medium;
+    color: black;
+}
+
+.language:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    margin-left: 50px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.2s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    text-align: left;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover {
+    background-color: #b1e596;
+}
+
+.logoImage {
+    position: fixed; 
+    top: 10px; 
+    left: 10px;
+}
+
+.logoImage img {
+    width: 70px;
+    height: 60px;
+}
+
+.menuIcon, .closeIcon {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .nav-links {
+        position: fixed;
+        background: #4C9F70;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px; /* Hide menu by default */
+        text-align: left;
+        z-index: 1000;
+        transition: right 0.5s; /* Ensure transition applies to 'right' property */
+    }
+    .nav-links ul {
+        flex-direction: column;
+        padding: 30px;
+    }
+    .nav-links ul li {
+        margin: 20px 0;
+    }
+    nav .menuIcon {
+        display: block;
+        color: black;
+        font-size: 20px;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 3;
+    }
+    nav .closeIcon {
+        display: block;
+        color: black;
+        font-size: 20px;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 220px;
+        z-index: 3;
+    }
+    .nav-links.show {
+        right: 0; /* Show menu when 'show' class is added */
+    }
+}

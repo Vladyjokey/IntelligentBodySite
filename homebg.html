@@ -9,9 +9,9 @@
     <link rel="alternate" hreflang="bg" href="https://example.com/homebg.html" />
     <link rel="alternate" hreflang="en" href="https://example.com/homeen.html" />
     <title>Кабинет за Кинезитерапия и Физиотерапия в София</title>
-    <link rel="icon" type="image/x-icon" href="Twitter-logo.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="navbarstyle.css">
+    <link rel="icon" type="image/x-icon" href="Images/Icons/Twitter-logo.png">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/navbarstyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
 </head>
 
@@ -19,8 +19,7 @@
     <header class="header" id="header">
         <nav>  
             <div class="nav-links" id="navLinks">
-                <a class="logoImage" href="#header"><img src="vitruvianManIcon.png" alt="логото на Интелигентно тяло"></a>
-                <i class="fa fa-times" id="faTimes" onclick="hideMenu()"></i>
+                <a class="logoImage" href="#header"><img src="Images/Icons/vitruvianManIcon.png" alt="логото на Интелигентно тяло"></a>
                 <ul class="nav-list">
                     <li><a id="home" href="#header">Начало</a></li>
                     <li><a id="services" href="#services-section">Услуги</a></li>
@@ -29,7 +28,7 @@
                     <li><a id="blog" href="blogbg.html">Блог</a></li>
                     <div class="language" id="language">
                         <button class="lanButton" id="lanButton">
-                            <img src="languageIcon.png" alt="Икона за смяна на езика">
+                            <img src="Images/Icons/languageIcon.png" alt="Икона за смяна на езика">
                             <label for="languageIcon">Български</label>
                         </button>
                         <div class="dropdown-content">
@@ -39,8 +38,10 @@
                     </div>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <i class="menuIcon" onclick="showMenu()"><img src="Images/Icons/menuIcon.png" alt="menu icon"></i>
+            <i class="closeIcon" onclick="hideMenu()"><img src="Images/Icons/closeIcon.png" alt="close icon"></i>
         </nav>
+
         <div class="text-box">
             <div class="description">
                 <h1 id="h1">Кабинет за рехабилитация <br> <span>Интелигентно Тяло</span></h1>
@@ -50,17 +51,17 @@
                 <div class="contactBox" id="contactBox">
                     <p>За връзка:</p>
                     <div style="display: flex;">
-                        <img src="phoneIcon.png" alt="an icon of a phone" width="22px" height="30px">
+                        <img src="Images/Icons/phoneIcon.png" alt="an icon of a phone" width="22px" height="30px">
                         <p><span class="copyable">+359 88 952 0106</span></p>
                     </div>
                     <div style="display: flex;">
-                        <img src="emailIcon.png" alt="an icon of an mail letter" width="30px" height="30px">
+                        <img src="Images/Icons/emailIcon.png" alt="an icon of an mail letter" width="30px" height="30px">
                         <p><span class="copyable">vvvesi_bg@yahoo.com</span></p>
                     </div>
                 </div>
                 <div class="workingHours">
                     <div style="display: flex;">
-                        <img src="calendarIcon.png" alt="an icon of a phone" width="30px" height="30px">
+                        <img src="Images/Icons/calendarIcon.png" alt="an icon of a phone" width="30px" height="30px">
                         <p>Работно време:</p>
                     </div>
                     <p>Понеделник - Петък: 9:00 до 17:00</p>
@@ -72,12 +73,6 @@
     </header>
 
     <main>
-        <!-- <section id="home-section" class="google-map">
-            <p>Кабинетът се намира на адрес - ул. „Иван Димитров-Куклата“ блок №53. За повече информация вижте картата или посетете страница за <a href="#services-section" style="color: rgb(0, 118, 67);">услуги</a>.</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.137814252013!2d23.368514276706044!3d42.67962297116509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa858680e57d63%3A0xccae3d05c21f86e0!2z0JjQvdGC0LXQu9C40LPQtdC90YLQvdC-INGC0Y_Qu9C-!5e0!3m2!1sen!2sbg!4v1719324591881!5m2!1sen!2sbg" 
-                width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section> -->
-
         <section id="services-section" class="service">
             <div>
                 <h1 id="h1" style="color: rgb(35, 35, 35); text-shadow: 5px 5px 10px;">Услуги</h1>            
@@ -167,7 +162,7 @@
                     -        Хирургично <br>
                     Информираното решение на пациента за всички възможности за неговото лечение е негов избор.
                 </p>
-                <img src="Vesela_Dimitrova.jpg" alt="д-р Весела Димитрова">
+                <img src="Images/Vesela_Dimitrova.jpg" alt="д-р Весела Димитрова">
             </div>
         </section>
     </main>
@@ -177,12 +172,16 @@
             <div class="footerContactDiv">
                 <p style="font-size: x-large;">За връзка:</p>
                 <div style="display: flex;">
-                    <img src="phoneIcon.png" alt="an icon of a phone" width="22px" height="30px">
+                    <img src="Images/Icons/phoneIcon.png" alt="an icon of a phone" width="22px" height="30px">
                     <p><span>+359 88 952 0106</span></p>
                 </div>
                 <div style="display: flex; gap: 5px;">
-                    <img src="emailIcon.png" alt="an icon of an mail letter" width="30px" height="30px">
+                    <img src="Images/Icons/emailIcon.png" alt="an icon of an mail letter" width="30px" height="30px">
                     <p><span>vvvesi_bg@yahoo.com</span></p>
+                </div>
+                <div style="display: flex; gap: 5px;">
+                    <img src="Images/Icons/locationIcon.png" alt="an icon of a location waypoint" width="30px" height="30px">
+                    <p><span>ул. „Иван Димитров-Куклата“ 53</span></p>
                 </div>
             </div>
             <iframe class="googleMapIframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.137814252013!2d23.368514276706044!3d42.67962297116509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa858680e57d63%3A0xccae3d05c21f86e0!2z0JjQvdGC0LXQu9C40LPQtdC90YLQvdC-INGC0Y_Qu9C-!5e0!3m2!1sen!2sbg!4v1719324591881!5m2!1sen!2sbg" 
@@ -191,15 +190,14 @@
         <div style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
             <div class="socialMediaDiv">
                 <a href="https://www.facebook.com/vesela.dimitrova.982" target="_blank">
-                    <img src="Facebook_Logo.png" alt="Лого на Facebook" width="60px" height="60px">
+                    <img src="Images/Icons/Facebook_Logo.png" alt="Лого на Facebook" width="60px" height="60px">
                 </a>
                 <a href="https://www.google.com/search?sa=X&sca_esv=be824180b2ab340a&tbm=lcl&sxsrf=ADLYWILEdPJmb_W1Lv4pv9bH7Q4FEhfM6Q:1721513671140&q=%D0%98%D0%BD%D1%82%D0%B5%D0%BB%D0%B8%D0%B3%D0%B5%D0%BD%D1%82%D0%BD%D0%BE+%D1%82%D1%8F%D0%BB%D0%BE+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE3sTC3NLI0MjEzMgXSlqZGGxgZXzFqXphxYe_FpgtbL-y-sOPCZiAN4u29sE_hYtPFfqDgPoWg1LLM1PLiRazEqwUAEO54MnMAAAA&rldimm=14748792924625929952&hl=en-BG&ved=2ahUKEwjRnOCW0raHAxXtVvEDHaxkATwQ9fQKegQIPBAF&biw=1632&bih=928&dpr=1#lkt=LocalPoiReviews&lrd=0x40aa858680e57d63:0xccae3d05c21f86e0,3,,,," target="_blank">
-                    <img src="googleLogo.png" alt="Лого на Google" width="60px" height="60px">
+                    <img src="Images/Icons/googleLogo.png" alt="Лого на Google" width="60px" height="60px">
                 </a>
             </div>
         </div>
     </footer>    
-    <script src="indexscript.js"></script>
-    <script src="servicesscript.js"></script>
+    <script src="Javascript/indexscript.js"></script>
 </body>
 </html>
