@@ -1,35 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional kinesitherapy and physiotherapy services in Sofia. Schedule an appointment for treatment and rehabilitation.">
+    <meta name="description" content="Professional kinesitherapy and physiotherapy services in Sofia. Book an appointment for treatment and rehabilitation.">
     <meta name="keywords" content="kinesitherapy, physiotherapy, treatment, rehabilitation, Sofia, Bulgaria">
     <meta name="author" content="Your Name">
     <link rel="alternate" hreflang="bg" href="https://example.com/homebg.html" />
     <link rel="alternate" hreflang="en" href="https://example.com/homeen.html" />
-    <title>Kinesitherapy and Physiotherapy Clinic in Sofia</title>
-    <link rel="icon" type="image/x-icon" href="Twitter-logo.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="navbarstyle.css">
+    <title>Kinesitherapy and Physiotherapy Office in Sofia</title>
+    <link rel="icon" type="image/x-icon" href="Images/Icons/Twitter-logo.png">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/navbarstyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
-</head>
+</head>    
 
 <body>
     <header class="header" id="header">
         <nav>
             <div class="nav-links" id="navLinks">
-                <a class="logoImage" href="#header"><img src="vitruvianManIcon.png" alt="Intelligent Body logo"></a>
-                <i class="fa fa-times" id="faTimes" onclick="hideMenu()"></i>
+                <a class="logoImage" href="#header"><img src="Images/Icons/vitruvianManIcon.png" alt="Intelligent Body logo"></a>
                 <ul class="nav-list">
                     <li><a id="home" href="#header">Home</a></li>
                     <li><a id="services" href="#services-section">Services</a></li>
                     <li><a id="for-us" href="#for-us-section">About Us</a></li>
-                    <li><a id="contact" href="#contact-section">Contact</a></li>
+                    <li><a id="contact" href="contacten.html">Contact</a></li>
                     <li><a id="blog" href="blogen.html">Blog</a></li>
                     <div class="language" id="language">
                         <button class="lanButton" id="lanButton">
-                            <img src="languageIcon.png" alt="Language switch icon">
+                            <img src="Images/Icons/languageIcon.png" alt="Language switch icon">
                             <label for="languageIcon">English</label>
                         </button>
                         <div class="dropdown-content">
@@ -39,44 +38,41 @@
                     </div>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <i class="menuIcon" onclick="showMenu()"><img src="Images/Icons/menuIcon.png" alt="menu icon"></i>
+            <i class="closeIcon" onclick="hideMenu()"><img src="Images/Icons/closeIcon.png" alt="close icon"></i>
         </nav>
+    
         <div class="text-box">
             <div class="description">
-                <h1 id="h1">Rehabilitation Clinic <br> <span>Intelligent Body</span></h1>
+                <h1 id="h1">Rehabilitation Office <br> <span>Intelligent Body</span></h1>
                 <p id="p1">We offer professional rehabilitation and physiotherapy services, see all services <a href="#services-section" style="color: rgb(149, 221, 190); font-weight: bold;">here</a>.</p>
             </div>
             <div class="infoBox">
                 <div class="contactBox" id="contactBox">
                     <p>Contact:</p>
                     <div style="display: flex;">
-                        <img src="phoneIcon.png" alt="an icon of a phone" width="22px" height="30px">
-                        <p><span>+359 88 952 0106</span></p>
+                        <img src="Images/Icons/phoneIcon.png" alt="phone icon" width="22px" height="30px">
+                        <p><span class="copyable">+359 88 952 0106</span></p>
                     </div>
                     <div style="display: flex;">
-                        <img src="emailIcon.png" alt="an icon of an mail letter" width="30px" height="30px">
-                        <p><span>vvvesi_bg@yahoo.com</span></p>
+                        <img src="Images/Icons/emailIcon.png" alt="email icon" width="30px" height="30px">
+                        <p><span class="copyable">vvvesi_bg@yahoo.com</span></p>
                     </div>
                 </div>
                 <div class="workingHours">
                     <div style="display: flex;">
-                        <img src="calendarIcon.png" alt="an icon of a calendar" width="30px" height="30px">
-                        <p>Working hours:</p>
+                        <img src="Images/Icons/calendarIcon.png" alt="calendar icon" width="30px" height="30px">
+                        <p>Working Hours:</p>
                     </div>
-                    <p>Monday - Friday: 9:00 to 17:00</p>
-                    <p>Saturday: 11:00 to 15:00</p>
+                    <p>Monday - Friday: 9:00 AM to 5:00 PM</p>
+                    <p>Saturday: 11:00 AM to 3:00 PM</p>
                 </div>
-            </div>
+            </div>    
+            <div id="copiedTooltip" class="tooltip">Copied!</div>
         </div>
-    </header>
+    </header>    
 
     <main>
-        <!-- <section id="home-section" class="google-map">
-            <p>The clinic is located at - Ivan Dimitrov-Kuklata Street, block 53. For more information, see the map or visit the <a href="#services-section" style="color: rgb(0, 118, 67);">services</a> page.</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.137814252013!2d23.368514276706044!3d42.67962297116509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa858680e57d63%3A0xccae3d05c21f86e0!2z0JjQvdGC0LXQu9C40LPQtdC90YLQvdC-INGC0Y_Qu9C-!5e0!3m2!1sen!2sbg!4v1719324591881!5m2!1sen!2sbg" 
-                width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section> -->
-
         <section id="services-section" class="service">
             <div>
                 <h1 id="h1" style="color: rgb(35, 35, 35); text-shadow: 5px 5px 10px;">Services</h1>            
@@ -118,7 +114,7 @@
                 <div class="sBoxes sBoxesA">
                     <div class="sBoxesInner">
                         <div class="sBoxesFront">
-                            <h2 id="h3">Creating an Individual Program</h2>
+                            <h2 id="h3">Creation of an Individual Program</h2>
                             <p id="sp">See more →</p>
                         </div>
                         <div class="sBoxesBack">
@@ -150,38 +146,42 @@
                 </div>
             </div>
         </section>
-
+    
         <section id="for-us-section">
             <div class="forusDiv">
                 <p>
-                    I have been in the profession for 25+ years and have the incredible opportunity to complement my extensive clinical experience in a leading clinic in Bulgaria with theoretical, academic knowledge and global innovations in the field of rehabilitation and medicine.
-                    I follow the latest methodologies and apply them through the knowledge of physiology, biomechanics, and neurology based on the individual characteristics of the patient.
-                    The individual approach is the secret to solving the patient's pain in combination with the trust between us.
-                    Since rehabilitation supports natural recovery, developing and following a specialized recovery program is important for the success of the treatment.
-                    I have a PhD in kinesitherapy on the topic of chronic low back pain. My interests include diseases of the musculoskeletal system (MSD), peripheral nervous system (PNS), musculoskeletal dysfunctions, pain syndromes, scoliosis, pre- and post-operative conditions.
+                    I have been in the profession for over 25 years and have had the incredible opportunity to complement my rich clinical experience in a leading clinic in Bulgaria with theoretical, academic knowledge and global innovations in the field of rehabilitation and medicine.
+                    I follow the latest methodologies and apply them through the lens of physiology, biomechanics, and neurology, based on the individual characteristics of each patient.
+                    The secret to resolving a patient's pain lies in an individualized approach, combined with the trust between us.
+                    Since rehabilitation supports natural recovery, creating and following a specialized recovery program is crucial for the success of the treatment.
+                    I hold a PhD in kinesitherapy on the topic of chronic lower back pain. My interests include disorders of the musculoskeletal system (MSK), peripheral nervous system (PNS), musculoskeletal dysfunctions, pain syndromes, scoliosis, and pre- and post-operative conditions.
                     In medicine, there are three main approaches to restoring health: <br>
-
-                    -        Through natural factors (rehabilitation, physiotherapy) <br>
-                    -        Medicinally <br>
-                    -        Surgically <br>
-                    The informed decision of the patient about all possible treatment options is their choice.
+    
+                    -        Through natural physical factors (rehabilitation, physiotherapy) <br>
+                    -        Medication <br>
+                    -        Surgical intervention <br>
+                    The informed decision of the patient regarding all possible treatment options is their choice.
                 </p>
-                <img src="Vesela_Dimitrova.jpg" alt="Dr. Vesela Dimitrova">
+                <img src="Images/Vesela_Dimitrova.jpg" alt="Dr. Vesela Dimitrova">
             </div>
         </section>
-    </main>
+    </main>    
 
     <footer>
         <div class="fDiv">
             <div class="footerContactDiv">
                 <p style="font-size: x-large;">Contact:</p>
                 <div style="display: flex;">
-                    <img src="phoneIcon.png" alt="an icon of a phone" width="22px" height="30px">
+                    <img src="Images/Icons/phoneIcon.png" alt="an icon of a phone" width="22px" height="30px">
                     <p><span>+359 88 952 0106</span></p>
                 </div>
                 <div style="display: flex; gap: 5px;">
-                    <img src="emailIcon.png" alt="an icon of an mail letter" width="30px" height="30px">
+                    <img src="Images/Icons/emailIcon.png" alt="an icon of a mail letter" width="30px" height="30px">
                     <p><span>vvvesi_bg@yahoo.com</span></p>
+                </div>
+                <div style="display: flex; gap: 5px;">
+                    <img src="Images/Icons/locationIcon.png" alt="an icon of a location waypoint" width="30px" height="30px">
+                    <p><span>53 Ivan Dimitrov-Kuklata St.</span></p>
                 </div>
             </div>
             <iframe class="googleMapIframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.137814252013!2d23.368514276706044!3d42.67962297116509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa858680e57d63%3A0xccae3d05c21f86e0!2z0JjQvdGC0LXQu9C40LPQtdC90YLQvdC-INGC0Y_Qu9C-!5e0!3m2!1sen!2sbg!4v1719324591881!5m2!1sen!2sbg" 
@@ -190,15 +190,14 @@
         <div style="width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
             <div class="socialMediaDiv">
                 <a href="https://www.facebook.com/vesela.dimitrova.982" target="_blank">
-                    <img src="Facebook_Logo.png" alt="Facebook Logo" width="60px" height="60px">
+                    <img src="Images/Icons/Facebook_Logo.png" alt="Facebook Logo" width="60px" height="60px">
                 </a>
                 <a href="https://www.google.com/search?sa=X&sca_esv=be824180b2ab340a&tbm=lcl&sxsrf=ADLYWILEdPJmb_W1Lv4pv9bH7Q4FEhfM6Q:1721513671140&q=%D0%98%D0%BD%D1%82%D0%B5%D0%BB%D0%B8%D0%B3%D0%B5%D0%BD%D1%82%D0%BD%D0%BE+%D1%82%D1%8F%D0%BB%D0%BE+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDE3sTC3NLI0MjEzMgXSlqZGGxgZXzFqXphxYe_FpgtbL-y-sOPCZiAN4u29sE_hYtPFfqDgPoWg1LLM1PLiRazEqwUAEO54MnMAAAA&rldimm=14748792924625929952&hl=en-BG&ved=2ahUKEwjRnOCW0raHAxXtVvEDHaxkATwQ9fQKegQIPBAF&biw=1632&bih=928&dpr=1#lkt=LocalPoiReviews&lrd=0x40aa858680e57d63:0xccae3d05c21f86e0,3,,,," target="_blank">
-                    <img src="googleLogo.png" alt="Google Logo" width="60px" height="60px">
+                    <img src="Images/Icons/googleLogo.png" alt="Google Logo" width="60px" height="60px">
                 </a>
             </div>
         </div>
     </footer>    
-    <script src="indexscript.js"></script>
-    <script src="servicesscript.js"></script>
+    <script src="Javascript/indexscript.js"></script>
 </body>
 </html>
