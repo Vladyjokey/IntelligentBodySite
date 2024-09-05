@@ -75,7 +75,7 @@ body {
 .infoBox {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
-    width: 700px;
+    width: 750px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -237,7 +237,7 @@ body {
     transform: scale(1.05);
 }
 
-.sBoxes p {
+.sBoxes h3 {
     opacity: 0;
     position: absolute;
     bottom: 10%;
@@ -246,8 +246,15 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
-.sBoxes:hover p {
+.sBoxes:hover h3 {
     opacity: 1;
+}
+
+.sBoxes p {
+    margin: 15px;
+    margin-top: 30px;
+    text-align: left;
+    font-size: larger;
 }
 
 /* Contact Section */
@@ -335,6 +342,14 @@ footer iframe {
     background-color: rgba(128, 128, 128, 0.385);
     border-radius: 5px;
     padding: 10px;
+}
+
+footer img {
+    transition: opacity 0.3s ease-in-out;
+}
+
+footer img:hover {
+    opacity: 0.7;
 }
 
 .socialMediaDiv {
