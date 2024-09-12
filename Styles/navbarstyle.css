@@ -174,7 +174,7 @@ nav img {
         color: black;
         font-size: 10px;
         cursor: pointer;
-        position: fixed;
+        position: absolute;
         top: 20px;
         right: 20px;
         z-index: 3;
