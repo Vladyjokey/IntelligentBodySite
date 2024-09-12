@@ -276,31 +276,35 @@ body {
 
 /* For Us Section */
 .forusDiv {
+    position: relative;
     min-height: 50vh;
     display: flex;
     width: 100%;
     flex-direction: row;
-    justify-content: space-between; /* Ensure space between elements */
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    background: linear-gradient(to bottom, #fff 5%, #2d6143 10%, #2d6143 95%, #fff 100%);
+    gap: 100px;
+    background: linear-gradient(to right, #2d6143 66%, #fff 75%);
     text-align: left;
-    padding: 100px;
+    padding-left: 15px;
     box-sizing: border-box;
-    margin: 0 auto;
     line-height: 30px;
+    border: 2px solid white;
+    border-radius: 5px;
 }
 
 .forusDiv img {
+    right: 0;
     width: 100%;
+    height: 100%;
     max-width: 450px;
-    height: auto;
 }
 
 .forusDiv p {
     font-size: larger;
-    margin-top: 20px;
     color: white;
+    text-align: justify;
+    margin-right: 20px;
 }
 
 /* Footer */
