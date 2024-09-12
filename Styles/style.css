@@ -87,13 +87,14 @@ html, body {
 .infoBox {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
-    width: 750px;
+    width: 90%; 
+    max-width: 750px; 
     display: flex;
-    flex-direction: row;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 15px;
+    gap: 10px; 
+    padding: 10px; 
     opacity: 0;
     transform: translateY(-60px);
     transition: opacity 1s ease-out, transform 1s ease-out;
@@ -391,9 +392,14 @@ footer img:hover {
         flex-direction: column;
         gap: 100px;
     }
+    .text-box h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }    
     .infoBox {
-        min-width: 100%;
+        min-width: 90%;
         padding: 10px;
+        flex-direction: column;
     } 
     .footerContactDiv {
         display: none !important;
