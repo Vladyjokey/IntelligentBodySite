@@ -65,17 +65,3 @@ function copyToClipboard(text) {
     document.execCommand("copy");
     document.body.removeChild(textArea);
 }
-
-function showMenu() {
-    if(document.getElementById("navLinks").classList.contains("show"))
-        document.getElementById("navLinks").classList.remove("show");
-    else
-        document.getElementById("navLinks").classList.add("show");
-
-    console.log(document.getElementById("navLinks").classList)
-}
-
-function hideMenu() {
-    document.getElementById("navLinks").classList.remove("show");
-    console.log('ththsthshtsh')
-}

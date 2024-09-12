@@ -39,6 +39,7 @@
         <nav>  
             <div class="nav-links" id="navLinks">
                 <a class="logoImage" href="#header"><img src="Images/Icons/vitruvianManIcon.png" alt="Логото на Интелигентно Тяло - Център за рехабилитация и физиотерапия"></a>
+                <i class="closeIcon" onclick="toggleMenu()"><img src="Images/Icons/closeIcon.png" alt="close icon"></i>
                 <ul class="nav-list">
                     <li><a id="home" href="#header">Начало</a></li>
                     <li><a id="services" href="#services-section">Услуги</a></li>
@@ -57,8 +58,7 @@
                     </div>
                 </ul>
             </div>
-            <i class="menuIcon" onclick="showMenu()"><img src="Images/Icons/menuIcon.png" alt="menu icon"></i>
-            <i class="closeIcon" onclick="hideMenu()"><img src="Images/Icons/closeIcon.png" alt="close icon"></i>
+            <i class="menuIcon" onclick="toggleMenu()"><img src="Images/Icons/menuIcon.png" alt="menu icon"></i>
         </nav>
 
         <div class="text-box">
@@ -248,5 +248,20 @@
         </div>
     </footer>    
     <script src="Javascript/indexscript.js"></script>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const menuIcon = document.querySelector('.menuIcon');
+            const closeIcon = document.querySelector('.closeIcon');
+
+            // Toggle the visibility of the menu
+            navLinks.classList.toggle('show');
+            
+            // // Toggle visibility of icons
+            // menuIcon.style.display = menuIcon.style.display === 'none' ? 'block' : 'none';
+            // closeIcon.style.display = closeIcon.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>
