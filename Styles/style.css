@@ -210,6 +210,12 @@ body {
 .sBoxesBack {
     transform: rotateY(180deg);
     background: linear-gradient(#4c9f70cd, #3ec8b1b9);
+    justify-content: center;
+    align-items: center;
+}
+
+.sBoxesBack p {
+    text-align: left !important;
 }
 
 .sBoxes.flip .sBoxesInner {
