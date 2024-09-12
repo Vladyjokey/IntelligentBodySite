@@ -15,11 +15,15 @@ html {
     padding: 0;
     font-family: 'Gilmer', sans-serif;
     color: white;
-    overflow-x: hidden;
 }
 
 body {
     overflow-x: hidden;
+}
+
+html, body {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    width: 100%; /* Ensure the body stays within the viewport */
 }
 
 /* Header Section */
