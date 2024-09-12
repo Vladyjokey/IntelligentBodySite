@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Office for Kinesitherapy and Physiotherapy in Sofia</title>
-    <link rel="icon" type="image/x-icon" href="Images/Icons/Twitter-logo.png">
+    <link rel="icon" type="image/x-icon" href="Images/Icons/vitruvianManIcon.png">
     <link rel="stylesheet" href="Styles/blogstyle.css">
     <link rel="stylesheet" href="Styles/navbarstyle.css">
 </head>
@@ -13,7 +13,7 @@
         <nav>  
             <div class="nav-links" id="navLinks">
                 <a class="logoImage" href="#header"><img src="Images/Icons/vitruvianManIcon.png" alt="Intelligent Body logo"></a>
-                <i class="fa fa-times" id="faTimes" onclick="hideMenu()"></i>
+                <i class="closeIcon" onclick="toggleMenu()"><img src="Images/Icons/closeIcon.png" alt="close icon"></i>
                 <ul class="nav-list">
                     <li><a id="home" href="homeen.html#header">Home</a></li>
                     <li><a id="services" href="homeen.html#services-section">Services</a></li>
@@ -22,7 +22,7 @@
                     <li><a id="blog" href="blogen.html">Blog</a></li>
                     <div class="language" id="language">
                         <button class="lanButton" id="lanButton">
-                            <img src="Images/Icons/languageIcon.png" alt="Language switch icon">
+                            <img id="responsiveImage" src="Images/Icons/languageIcon.png" alt="Language switch icon">
                             <label for="languageIcon">English</label>
                         </button>
                         <div class="dropdown-content">
@@ -32,7 +32,7 @@
                     </div>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
+            <i class="menuIcon" onclick="toggleMenu()"><img src="Images/Icons/menuIcon.png" alt="menu icon"></i>
         </nav>
 
         <div class="headerDiv">
@@ -108,5 +108,7 @@
             <img src="Images/Icons/googleLogo.png" alt="Google Logo" width="50px" height="50px">
         </a>
     </footer>
+    
+    <script src="Javascript/navbar.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
     <link rel="alternate" hreflang="bg" href="https://example.com/index.html" />
     <link rel="alternate" hreflang="en" href="https://example.com/homeen.html" />
     <title>Kinesitherapy and Physiotherapy Office in Sofia</title>
-    <link rel="icon" type="image/x-icon" href="Images/Icons/Twitter-logo.png">
+    <link rel="icon" type="image/x-icon" href="Images/Icons/vitruvianManIcon.png">
     <link rel="stylesheet" href="Styles/style.css">
     <link rel="stylesheet" href="Styles/navbarstyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
@@ -20,6 +20,7 @@
         <nav>
             <div class="nav-links" id="navLinks">
                 <a class="logoImage" href="#header"><img src="Images/Icons/vitruvianManIcon.png" alt="Intelligent Body logo"></a>
+                <i class="closeIcon" onclick="toggleMenu()"><img src="Images/Icons/closeIcon.png" alt="close icon"></i>
                 <ul class="nav-list">
                     <li><a id="home" href="#header">Home</a></li>
                     <li><a id="services" href="#services-section">Services</a></li>
@@ -28,7 +29,7 @@
                     <li><a id="blog" href="blogen.html">Blog</a></li>
                     <div class="language" id="language">
                         <button class="lanButton" id="lanButton">
-                            <img src="Images/Icons/languageIcon.png" alt="Language switch icon">
+                            <img id="responsiveImage" src="Images/Icons/languageIcon.png" alt="Language switch icon">
                             <label for="languageIcon">English</label>
                         </button>
                         <div class="dropdown-content">
@@ -38,8 +39,7 @@
                     </div>
                 </ul>
             </div>
-            <i class="menuIcon" onclick="showMenu()"><img src="Images/Icons/menuIcon.png" alt="menu icon"></i>
-            <i class="closeIcon" onclick="hideMenu()"><img src="Images/Icons/closeIcon.png" alt="close icon"></i>
+            <i class="menuIcon" onclick="toggleMenu()"><img src="Images/Icons/menuIcon.png" alt="menu icon"></i>
         </nav>
     
         <div class="text-box">
@@ -223,5 +223,6 @@
         </div>
     </footer>    
     <script src="Javascript/indexscript.js"></script>
+    <script src="Javascript/navbar.js"></script>
 </body>
 </html>

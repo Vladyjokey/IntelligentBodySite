@@ -9,7 +9,7 @@
     <link rel="alternate" hreflang="bg" href="https://example.com/index.html" />
     <link rel="alternate" hreflang="en" href="https://example.com/homeen.html" />
     <title>Кинезитерапия и Физиотерапия в София | Интелигентно Тяло - Професионална Рехабилитация</title>
-    <link rel="icon" type="image/x-icon" href="Images/Icons/Twitter-logo.png">
+    <link rel="icon" type="image/x-icon" href="Images/Icons/vitruvianManIcon.png">
     <link rel="stylesheet" href="Styles/style.css">
     <link rel="stylesheet" href="Styles/navbarstyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
@@ -48,7 +48,7 @@
                     <li><a id="blog" href="blogbg.html">Блог</a></li>
                     <div class="language" id="language">
                         <button class="lanButton" id="lanButton">
-                            <img src="Images/Icons/languageIcon.png" alt="Икона за смяна на езика">
+                            <img id="responsiveImage" src="Images/Icons/languageIcon.png" alt="Икона за смяна на езика">
                             <label for="languageIcon">Български</label>
                         </button>
                         <div class="dropdown-content">
@@ -248,20 +248,6 @@
         </div>
     </footer>    
     <script src="Javascript/indexscript.js"></script>
-
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            const menuIcon = document.querySelector('.menuIcon');
-            const closeIcon = document.querySelector('.closeIcon');
-
-            // Toggle the visibility of the menu
-            navLinks.classList.toggle('show');
-            
-            // // Toggle visibility of icons
-            // menuIcon.style.display = menuIcon.style.display === 'none' ? 'block' : 'none';
-            // closeIcon.style.display = closeIcon.style.display === 'none' ? 'block' : 'none';
-        }
-    </script>
+    <script src="Javascript/navbar.js"></script>
 </body>
 </html>
