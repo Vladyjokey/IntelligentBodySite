@@ -1,4 +1,10 @@
 User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /config/
+Disallow: /cgi-bin/
 Disallow: /private/
+Disallow: /tmp/
+Disallow: /print-version/
 
 Sitemap: https://intelligentbody.eu/sitemap.xml
