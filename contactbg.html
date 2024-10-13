@@ -7,6 +7,12 @@
     <link rel="icon" type="image/x-icon" href="Images/Icons/vitruvianManIcon.png">
     <link rel="stylesheet" href="Styles/contactstyle.css">
     <link rel="stylesheet" href="Styles/navbarstyle.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("hE4Q0Qjw8nQ23INq3");
+    })();
+    </script>
 </head>
 <body>
     <header>
@@ -55,6 +61,7 @@
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
+        
         <div class="form-container">
             <p><strong>Изпратете съобщение</strong></p>
             <form id="contactForm">
@@ -70,6 +77,19 @@
                 <button type="submit">Изпрати</button>
             </form>            
         </div>
+
+        <div id="loadingSpinner" class="spinner" style="display: none;"></div>
+
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <div id="checkmark-circle" class="checkmark-circle">
+                    
+                </div>
+                <h2 id="thankYouMessage">Благодарим ви!</h2>
+                <p id="thankYouMessageW">Your submission has been sent.</p>
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -81,43 +101,60 @@
         </a>
     </footer>
 
-    <script>
+    <script type="text/javascript">
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            
-            // Capture form data
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Create an object to store the form data
-            const formData = {
-                name: name,
-                email: email,
-                message: message
-            };
-            
-            // Send the form data to the server using fetch
-            fetch('http://localhost:3000/saveMessage', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                // Optionally, display a success message to the user
-                alert('Вашето съобщение беше изпратено успешно!');
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                // Optionally, display an error message to the user
-                alert('Възникна грешка при изпращането на съобщението. Моля, опитайте отново.');
-            });
-        });
-    </script>
+           event.preventDefault(); // prevent the form from submitting the traditional way
+
+           document.getElementById('loadingSpinner').style.display = 'block';
+
+            emailjs.send("service_qtfwtos","template_lo1164m",{
+                from_name: document.getElementById('name').value,
+                to_name: "Веси",
+                message: document.getElementById('message').value,
+                reply_to: document.getElementById('email').value,
+            }).then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                document.getElementById('checkmark-circle').innerHTML = `
+                    <svg viewBox="0 0 76 76" class="checkmark">
+                        <circle cx="38" cy="38" r="36" class="checkmark-circle"/>
+                        <path fill="none" class="checkmark-check" d="M23 38l10 10 20-20"/>
+                    </svg>
+                `;
+            }).catch(function(error) {
+                console.log('FAILED...', error);
+                document.getElementById('checkmark-circle').innerHTML = `
+                    <svg viewBox="0 0 76 76" class="checkmark">
+                        <circle cx="38" cy="38" r="36" class="checkmark-circle" fill="none" stroke="red" stroke-width="6"/>
+                        <path fill="none" stroke="red" stroke-width="6" stroke-linecap="round" 
+                            d="M25 25 L51 51 M51 25 L25 51" class="cross"/>
+                    </svg>
+                `;
+                document.getElementById('thankYouMessage').textContent = 'Възникна грешка'
+                document.getElementById('thankYouMessageW').textContent = 'Съобщението не беше изпратено'
+           }).finally(function(){
+                document.getElementById('loadingSpinner').style.display = 'none';
+                document.getElementById('contactForm').reset()
+                openModal()
+           })
+        })
+
+        function openModal() {
+            const modal = document.getElementById("successModal");
+            modal.style.display = "block";
+
+            const closeBtn = document.getElementById("closeModal");
+            closeBtn.onclick = function() {
+                modal.style.display = "none"; // Close modal when "X" is clicked
+            }
+
+            // Close modal if user clicks outside modal
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+     </script>
     <script src="Javascript/navbar.js"></script>
 </body>
 </html>
